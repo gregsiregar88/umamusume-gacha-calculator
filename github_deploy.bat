@@ -196,7 +196,17 @@ set /p repo_name="Enter repository name (default: umamusume-gacha-calculator): "
 
 if "!repo_name!"=="" set repo_name=umamusume-gacha-calculator
 
-set repo_url=https://github.com/!username!/!repo_name!.git
+echo.
+echo Choose repository URL format:
+echo 1. HTTPS (recommended for Personal Access Token)
+echo 2. SSH (if you have SSH keys set up)
+set /p url_choice="Enter choice (1 or 2): "
+
+if "!url_choice!"=="2" (
+    set repo_url=git@github.com:!username!/!repo_name!.git
+) else (
+    set repo_url=https://github.com/!username!/!repo_name!.git
+)
 
 echo.
 echo Repository URL: !repo_url!
@@ -207,6 +217,15 @@ if /i not "!confirm!"=="y" (
     pause
     exit /b 1
 )
+
+echo.
+echo 🔐 Authentication Setup:
+echo If you haven't set up authentication yet:
+echo 1. Go to GitHub → Settings → Developer settings → Personal access tokens
+echo 2. Generate a new token with 'repo' permissions
+echo 3. Use the token as your password when prompted
+echo.
+pause
 
 REM Add remote and push
 echo 🔧 Adding remote and pushing to GitHub...
@@ -220,13 +239,17 @@ if errorlevel 1 (
 )
 echo ✅ Remote added
 
-REM Push to GitHub
+REM Push to GitHub (try main first, then master)
 git push -u origin main
 if errorlevel 1 (
-    echo ❌ Failed to push to GitHub
-    echo 💡 Make sure you have access to the repository
-    pause
-    exit /b 1
+    echo Trying with master branch...
+    git push -u origin master
+    if errorlevel 1 (
+        echo ❌ Failed to push to GitHub
+        echo 💡 Make sure you have access to the repository
+        pause
+        exit /b 1
+    )
 )
 echo ✅ Pushed to GitHub
 
