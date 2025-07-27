@@ -3,9 +3,10 @@ const cors = require('cors');
 const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
+const { config, getImageUrl } = require('./config');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = config.server.port;
 
 // Middleware
 app.use(cors());
@@ -38,7 +39,7 @@ app.get('/api/cards', (req, res) => {
             rarity: row.rarity,
             rate: row.rate,
             type: row.type,
-            image: row.image_path
+            image: getImageUrl(row.image_path)
         }));
         
         res.json(cards);
@@ -85,7 +86,7 @@ app.get('/api/cards/type/:type', (req, res) => {
             rarity: row.rarity,
             rate: row.rate,
             type: row.type,
-            image: row.image_path
+            image: getImageUrl(row.image_path)
         }));
         
         res.json(cards);

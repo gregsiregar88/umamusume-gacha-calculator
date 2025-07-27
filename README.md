@@ -141,6 +141,32 @@ npm run dev
 - **Database**: SQLite
 - **Image Format**: SVG (vector graphics)
 - **Server**: Express.js HTTP server
+- **CDN**: jsDelivr (optional)
+
+## 🌐 CDN Image Serving
+
+The project supports serving images via jsDelivr CDN for better performance:
+
+### **Enable CDN Mode:**
+```bash
+.\enable_cdn.bat
+```
+
+### **Disable CDN Mode:**
+```bash
+.\disable_cdn.bat
+```
+
+### **CDN URL Format:**
+```
+https://cdn.jsdelivr.net/gh/username/repo@branch/assets/SSR/Border/card-name.svg
+```
+
+### **Benefits:**
+- ✅ Faster image loading
+- ✅ Reduced server bandwidth
+- ✅ Global CDN distribution
+- ✅ Automatic caching
 
 ## 📝 Card Information
 

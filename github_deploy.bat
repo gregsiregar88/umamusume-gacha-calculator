@@ -230,14 +230,21 @@ pause
 REM Add remote and push
 echo 🔧 Adding remote and pushing to GitHub...
 
-REM Add remote
-git remote add origin "!repo_url!"
-if errorlevel 1 (
-    echo ❌ Failed to add remote
-    pause
-    exit /b 1
+REM Check if remote already exists
+git remote get-url origin >nul 2>&1
+if not errorlevel 1 (
+    echo Remote already exists, updating...
+    git remote set-url origin "!repo_url!"
+) else (
+    REM Add remote
+    git remote add origin "!repo_url!"
+    if errorlevel 1 (
+        echo ❌ Failed to add remote
+        pause
+        exit /b 1
+    )
 )
-echo ✅ Remote added
+echo ✅ Remote added/updated
 
 REM Push to GitHub (try main first, then master)
 git push -u origin main
