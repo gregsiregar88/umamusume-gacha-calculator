@@ -1,0 +1,28 @@
+[
+    {"name": "Air Shakur",         "rarity": "SSR", "rate": 0.087,  "type": "Wits", "image": "SSR/Border/air-shakur.svg"},
+    {"name": "Biko Pegasus",       "rarity": "SSR", "rate": 0.0869, "type": "Speed", "image": "SSR/Border/biko-pegasus.svg"},
+    {"name": "El Condor Pasa",     "rarity": "SSR", "rate": 0.087,  "type": "Power", "image": "SSR/Border/el-condor-pasa.svg"},
+    {"name": "Fine Motion",        "rarity": "SSR", "rate": 0.087,  "type": "Wits", "image": "SSR/Border/fine-motion.svg"},
+    {"name": "Gold City",          "rarity": "SSR", "rate": 0.0869, "type": "Speed", "image": "SSR/Border/gold-city.svg"},
+    {"name": "Gold Ship",          "rarity": "SSR", "rate": 0.087,  "type": "Stamina", "image": "SSR/Border/gold-ship.svg"},
+    {"name": "Grass Wonder",       "rarity": "SSR", "rate": 0.087,  "type": "Guts", "image": "SSR/Border/grass-wonder.svg"},
+    {"name": "Ines Fujin",         "rarity": "SSR", "rate": 0.087,  "type": "Guts", "image": "SSR/Border/ines-fujin.svg"},
+    {"name": "Kitasan Black",      "rarity": "SSR", "rate": 0.5,    "type": "Speed", "image": "SSR/Border/kitasan-black.svg"},
+    {"name": "Mejiro Palmer",      "rarity": "SSR", "rate": 0.0869, "type": "Guts", "image": "SSR/Border/mejiro-palmer.svg"},
+    {"name": "Nishino Flower",     "rarity": "SSR", "rate": 0.0869, "type": "Speed", "image": "SSR/Border/nishino-flower.svg"},
+    {"name": "Oguri Cap",          "rarity": "SSR", "rate": 0.0869, "type": "Power", "image": "SSR/Border/oguri-cap.svg"},
+    {"name": "Sakura Bakushin O",  "rarity": "SSR", "rate": 0.0869, "type": "Speed", "image": "SSR/Border/sakura-bakushin-o.svg"},
+    {"name": "Satono Diamond",     "rarity": "SSR", "rate": 0.5,    "type": "Stamina", "image": "SSR/Border/satono-diamond.svg"},
+    {"name": "Seiun Sky",          "rarity": "SSR", "rate": 0.087,  "type": "Stamina", "image": "SSR/Border/seiun-sky.svg"},
+    {"name": "Silence Suzuka",     "rarity": "SSR", "rate": 0.087,  "type": "Speed", "image": "SSR/Border/silence-suzuka.svg"},
+    {"name": "Smart Falcon",       "rarity": "SSR", "rate": 0.0869, "type": "Power", "image": "SSR/Border/smart-falcon.svg"},
+    {"name": "Special Week",       "rarity": "SSR", "rate": 0.087,  "type": "Guts", "image": "SSR/Border/special-week.svg"},
+    {"name": "Super Creek",        "rarity": "SSR", "rate": 0.0869, "type": "Stamina", "image": "SSR/Border/super-creek.svg"},
+    {"name": "Tamamo Cross",       "rarity": "SSR", "rate": 0.087,  "type": "Stamina", "image": "SSR/Border/tamamo-cross.svg"},
+    {"name": "Tazuna Hayakawa",    "rarity": "SSR", "rate": 0.0869, "type": "Friend", "image": "SSR/Border/tazuna-hayakawa.svg"},
+    {"name": "Tokai Teio",         "rarity": "SSR", "rate": 0.087,  "type": "Speed", "image": "SSR/Border/tokai-teio.svg"},
+    {"name": "Twin Turbo",         "rarity": "SSR", "rate": 0.0869, "type": "Speed", "image": "SSR/Border/twin-turbo.svg"},
+    {"name": "Vodka",              "rarity": "SSR", "rate": 0.087,  "type": "Power", "image": "SSR/Border/vodka.svg"},
+    {"name": "Winning Ticket",     "rarity": "SSR", "rate": 0.087,  "type": "Guts", "image": "SSR/Border/winning-ticket.svg"}
+  ]
+  

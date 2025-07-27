@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Gacha Rate Calculator</title>
+    <link rel="stylesheet" href="gacha.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Support Gacha Target Calculator</h1>
+        
+        <!-- Card Display Section -->
+        <div id="card-display-section" style="text-align:center; margin:24px 0;">
+            <div class="card-frame">
+                <img src="" alt="Kitasan Black SSR" class="card-image">
+            </div>
+        </div>
+        
+        <form id="target-form">
+            <label for="card-select">Select Card:</label>
+            <select id="card-select" name="card-select"></select>
+            <label for="copies">Copies Wanted:</label>
+            <input type="number" id="copies" name="copies" min="1" value="1" required>
+            <label for="probability">Desired Probability (%):</label>
+            <input type="number" id="probability" name="probability" min="1" max="99.999" step="0.001" value="90" required>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="target-result" style="text-align:center; margin-top:24px; font-size:1.2em;"></div>
+        <hr>
+        <div id="reroll-counter-section">
+            <button id="reroll-increment" type="button">+1 Reroll</button>
+            <div class="counter-display">
+                <div class="counter-box">
+                    <div class="counter-header counter">COUNTER</div>
+                    <div class="counter-value">
+                        <span id="reroll-count">0</span>
+                    </div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-header ssr">SSR</div>
+                    <div class="counter-value">
+                        <span id="total-ssr-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SSR Card Buttons Section -->
+        <div id="ssr-buttons-section" style="margin-top:24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <h3 style="margin: 0;">SSR Card Counters</h3>
+                <button id="reset-all-btn" type="button" style="background: #f44336; color: white; border: none; border-radius: 4px; padding: 8px 16px; font-size: 14px; cursor: pointer;">Reset All</button>
+            </div>
+            <div id="ssr-buttons-grid">
+                <!-- SSR card buttons will be inserted here -->
+            </div>
+        </div>
+        
+        <div id="reroll-history-section" style="margin-top:32px;">
+            <h3>Reroll History</h3>
+            <div id="reroll-cards-container">
+                <!-- Reroll cards will be inserted here -->
+            </div>
+        </div>
+    </div>
+    <script src="gacha.js"></script>
+</body>
+</html>

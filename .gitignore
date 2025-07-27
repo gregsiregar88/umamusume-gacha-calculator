@@ -1,0 +1,46 @@
+# Database files (too large for GitHub)
+*.db
+*.sqlite
+*.sqlite3
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.env
+.venv/
+venv/
+ENV/
+
+# Logs
+*.log
+logs/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+
+# Reroll results (user data)
+reroll-results/
+
+# Large image files (PNG versions)
+*.png
+!buttons/*.png
+
+# Keep only SVG files for GitHub
+# Remove PNG files to reduce repository size 
