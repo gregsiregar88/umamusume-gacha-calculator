@@ -39,7 +39,9 @@ app.get('/api/cards', (req, res) => {
             rarity: row.rarity,
             rate: row.rate,
             type: row.type,
-            image: getImageUrl(row.image_path)
+            image: config.cdn.enabled ? 
+                `https://cdn.jsdelivr.net/gh/${config.github.username}/${config.github.repo}@${config.github.branch}/${row.image_path}` : 
+                `/assets/${row.image_path}`
         }));
         
         res.json(cards);
@@ -86,7 +88,9 @@ app.get('/api/cards/type/:type', (req, res) => {
             rarity: row.rarity,
             rate: row.rate,
             type: row.type,
-            image: getImageUrl(row.image_path)
+            image: config.cdn.enabled ? 
+                `https://cdn.jsdelivr.net/gh/${config.github.username}/${config.github.repo}@${config.github.branch}/${row.image_path}` : 
+                `/assets/${row.image_path}`
         }));
         
         res.json(cards);
@@ -110,7 +114,15 @@ app.get('/database', (req, res) => {
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-    res.json({ status: 'OK', timestamp: new Date().toISOString() });
+    res.json({ 
+        status: 'OK', 
+        timestamp: new Date().toISOString(),
+        cdn: {
+            enabled: config.cdn.enabled,
+            baseUrl: config.cdn.baseUrl,
+            github: config.github
+        }
+    });
 });
 
 // Start server

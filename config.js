@@ -3,7 +3,7 @@ const config = {
     // CDN Configuration
     cdn: {
         enabled: true, // Set to true to use jsDelivr CDN
-        baseUrl: 'https://cdn.jsdelivr.net/gh/gregsiregar88/umamusume-gacha-calculator@main',
+        baseUrl: 'https://cdn.jsdelivr.net/gh/gregsiregar88/umamusume-gacha-calculator@master',
         localBaseUrl: '/assets'
     },
     
@@ -11,7 +11,7 @@ const config = {
     github: {
         username: 'gregsiregar88',
         repo: 'umamusume-gacha-calculator',
-        branch: 'main'
+        branch: 'master'
     },
     
     // Server Configuration
@@ -23,6 +23,7 @@ const config = {
 // Helper function to get image URL
 function getImageUrl(imagePath) {
     if (config.cdn.enabled) {
+        // Use CDN URL with fallback to local
         return `${config.cdn.baseUrl}/${imagePath}`;
     } else {
         return `${config.cdn.localBaseUrl}/${imagePath}`;

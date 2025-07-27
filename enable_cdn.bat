@@ -13,7 +13,7 @@ if not exist "config.js" (
 echo Current configuration:
 echo - Username: gregsiregar88
 echo - Repository: umamusume-gacha-calculator
-echo - Branch: main
+echo - Branch: master
 echo.
 
 set /p username="Enter GitHub username (or press Enter for gregsiregar88): "
@@ -22,8 +22,8 @@ if "!username!"=="" set username=gregsiregar88
 set /p repo="Enter repository name (or press Enter for umamusume-gacha-calculator): "
 if "!repo!"=="" set repo=umamusume-gacha-calculator
 
-set /p branch="Enter branch name (or press Enter for main): "
-if "!branch!"=="" set branch=main
+set /p branch="Enter branch name (or press Enter for master): "
+if "!branch!"=="" set branch=master
 
 echo.
 echo Updating configuration...
